@@ -1,0 +1,66 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'custom';
+@import "bulma";
+
+body {
+  min-height: 100vh;
+  color: white;
+  //background-image: linear-gradient(to top, #073947 0%, #005bea 100%);
+  //background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  //background-image: linear-gradient(to top, #cbcdcf 0%, #6078ea 100%);
+  background-image: linear-gradient(159deg, #113167, #1b4c8d, #2469b4, #2d87dd);
+  font-family: sans-serif;
+}
+
+
+.notification:not(:last-child){
+  margin-bottom: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.title-logo{
+  color: #18A8FD;
+  font-size: 50px;
+}
+
+.button-custom{
+  background-color:white;
+  border: #18A8FD;
+  color:#18A8FD;
+  font-weight: bold;
+}
+
+.button-custom :hover{
+  margin-top: 3px;
+  color: #fff;
+  background:#18A8FD;
+  border-bottom: 2px solid #18A8FD;
+}
+
+.btn--shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+.ratings .fa{
+  font-size: 30px;
+  color: #ffcc00;
+  cursor: pointer;
+}
+
+.main-rating{
+  display: flex;
+}
+
+.rating-value-display{
+  font-size: 20px;
+}
+
+.image{
+  margin-top: 55px;
+}

@@ -1,0 +1,22 @@
+<section class="section mt-5">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-10 ">
+      <p class="is-size-1 has-text-weight-bold has-text-centered mt-6">あなたの見たい作品の評価がわかる</p>
+      <br>
+      <div class="columns is-centered">
+      <%if !logged_in?%>
+        <div class="column is-3">
+        <%=link_to "新規登録" ,new_user_path ,class: "button-custom button  is-fullwidth btn--shadow"%>
+        <br>
+        <%=link_to "ログイン" ,login_path, class: "button-custom button is-fullwidth btn--shadow"%>
+        <%end%>
+        <%if logged_in?%>
+        <div class="is-size-2 has-text-weight-bold"><%=current_user.name%>さんようこそ</div>
+        <%end%>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>

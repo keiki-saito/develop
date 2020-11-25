@@ -1,0 +1,156 @@
+
+
+.alert {
+    margin-bottom: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+  }
+
+  .form-control {
+    height: 45px;
+  }
+  
+  .users-new-wrapper {
+    width: 100vw;
+    height: 100vh;
+ 
+    
+  
+    .users-new-container {
+      padding-top: 220px;
+  
+      .form-group {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+
+  .btn{
+    color: #fff;
+    background-color:#18A8FD;
+  }
+  .btn:hover {
+    margin-top: 3px;
+    color: #fff;
+    background:#18A8FD;
+    border-bottom: 2px solid #18A8FD;
+  }
+
+  .btn--shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  }
+
+  .top-container{
+    width: 100vw;
+    height: 100vh;
+  //background-image: url('bg-top2.jpg');
+  //background-position: top;
+  //background-repeat: no-repeat;
+  //background-attachment: fixed;
+  background-size: cover;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  background-image: linear-gradient(to top, #073947 0%, #005bea 100%);
+
+  }
+
+  .bg-mask{
+     height: 100%;
+    background: rgba(0,0,0,0.5);
+   }
+   .top-content{
+     margin-top: 350px;
+   }
+
+   .text{
+     color: #fff;
+     font-size: 20px;
+     font-weight: bold;
+   }
+  
+  nav{
+    justify-content: space-between;
+
+  }
+
+  .navbar-brand{
+    margin-right: 300px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #18A8FD;
+  }
+  li{
+    list-style: none;
+  }
+  .nav-item{
+    margin-right: 30px;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .nav-link{
+    color: #18A8FD;
+  }
+
+  .login-btn{
+  display: inline-block;
+  padding: 20px 10px;
+  text-decoration: none;
+  color: #18A8FD;
+  border: solid 2px #18A8FD;
+  border-radius: 3px;
+  transition: .4s;
+  font-size: 20px;
+  margin-top: 5px;
+  }
+
+  .login-btn:hover{
+    background: #18A8FD;
+    color: white;
+  }
+
+  .logout-btn{
+  display: inline-block;
+  padding: 20px 10px;
+  text-decoration: none;
+  color: #18A8FD;
+  border: solid 2px #18A8FD;
+  border-radius: 3px;
+  transition: .4s;
+  font-size: 20px;
+  margin-top: 5px;
+  }
+
+  .logout-btn:hover{
+    background: #18A8FD;
+    color: white;
+  }
+
+  .new-btn{
+  display: inline-block;
+  padding: 15px 10px;
+  text-decoration: none;
+  color:  #18A8FD;
+  border: solid 2px #fff;
+  border-radius: 5px;
+  transition: .4s;
+  font-size: 20px;
+  width: 500px;
+  font-weight: bold;
+  //background: #18A8FD;
+  //background: rgba(0,0,0,0.2);
+  //background: #00AF6D;
+  background: #fff;
+  }
+
+
+
+
+
+
+
+
+  
