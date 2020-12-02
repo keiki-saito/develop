@@ -7,6 +7,13 @@
      <script src="https://kit.fontawesome.com/484e6509e8.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- コード追加Bootstrap JavaScript読み込みコード-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery.raty.js"></script>
+     <%= favicon_link_tag('favicon.ico') %>
   </head>
 
   <body>
@@ -28,28 +35,24 @@
         映画
         </a>
         <div class="navbar-dropdown is-boxed is-right">
-          <a class="navbar-item">
-            国内映画
+          <a href="/jmovies" class="navbar-item">
+          国内映画
           </a>
-          <a class="navbar-item">
-            海外映画
+          <a href="/fmovies" class="navbar-item">
+          海外映画
           </a>
         </div>
       </div>
 
+   <div id="navbarBasicExample" class="navbar-menu">
+   <div class="navbar-end">
     <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+      <a href="/janimes" class="navbar-link">
         アニメ
         </a>
-        <div class="navbar-dropdown is-boxed is-right">
-          <a class="navbar-item">
-            コメディアニメ
-          </a>
-          <a class="navbar-item">
-            大人向けアニメ
-          </a>
-        </div>
       </div>
+    </div>
+    </div>
 
       <div class="navbar-item has-dropdown is-hoverable ">
         <a class="navbar-link">
@@ -74,16 +77,21 @@
   <%end%>
  
  </header>
+  
   <main>
     <%= yield %>
   </main>
 
 
+
+ <footer>
+    Reserved 
+</footer>
+
+  </body>
 <script>
   $(function(){
     $(".alert").fadeOut(5000);
   });
 </script>
-
-  </body>
 </html>

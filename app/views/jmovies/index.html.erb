@@ -1,0 +1,20 @@
+<section class="sction mt-5">
+<div class="columns is-multiline is-centered movie-container">
+
+ <%@jmovies.each do |jmovie|%>
+  <%next if jmovie.id%2==1%>
+      <div class="column is-2 ml-2">
+      <%=image_tag jmovie.jmovie_url,class: 'image',:width=>'250'%>
+
+      <%=link_to jmovie_path(jmovie),class: "button card-footer-item" do%>
+               コメントを投稿する
+            <%end%>
+      
+      </div>
+   <%end%>
+ 
+  <%= paginate @jmovies %>
+</div>    
+       
+   
+</section>

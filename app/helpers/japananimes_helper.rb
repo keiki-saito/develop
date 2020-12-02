@@ -1,0 +1,2 @@
+module JapananimesHelper
+end

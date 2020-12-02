@@ -1,4 +1,4 @@
-<section class="section mt-5">
+<section class="section section-1">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-10 ">
@@ -7,16 +7,50 @@
       <div class="columns is-centered">
       <%if !logged_in?%>
         <div class="column is-3">
-        <%=link_to "新規登録" ,new_user_path ,class: "button-custom button  is-fullwidth btn--shadow"%>
+          <%=link_to "新規登録" ,new_user_path ,class: "button-custom button  is-fullwidth btn--shadow"%>
         <br>
-        <%=link_to "ログイン" ,login_path, class: "button-custom button is-fullwidth btn--shadow"%>
-        <%end%>
+          <%=link_to "ログイン" ,login_path, class: "button-custom button is-fullwidth btn--shadow"%>
+      <%end%>
         <%if logged_in?%>
-        <div class="is-size-2 has-text-weight-bold"><%=current_user.name%>さんようこそ</div>
+          <div class="is-size-2 has-text-weight-bold mb-5"><%=current_user.name%>さんようこそ</div>
         <%end%>
       </div>
       </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="section section-2">
+  <div class="container is-12">
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <p class="is-size-1 has-text-weight-bold has-text-centered ">Netflixとは</p>
+      <br>
+      <div class="column">
+      <p class="is-size-5 has-text-weight-bold has-text-centered">映画・アニメ・ドラマ選びで失敗したくないあなたにおすすめです。</p>
+      </div>
+
+    <div class="columns is-centered osuume">
+      <div class="column has-text-centered">
+        <i class="far fa-check-square check-box"></i>
+        <p class="has-text-weight-bold mt-3">リアルな口コミ<p>
+        <p class="has-text-weight-medium">実際に見た方の感想がすぐに分かる</p>
+      </div>
+      <div class="column has-text-centered">
+        <i class="far fa-thumbs-up thumbs"></i>
+        <p class="has-text-weight-bold mt-3">利用しやすいレイアウト</p>
+        <p class="has-text-weight-medium">こだわり抜いたレイアウトによりストレスフリーで利用できる</p>
+      </div>
+      <div class="column has-text-centered">
+        <i class="fas fa-video video"></i>
+        <p class="has-text-weight-bold mt-3">Netflixコンテンツを網羅した情報量</p>
+        <p class="has-text-weight-medium">あなたの見たい作品が見つかる</p>
+      </div>
+    </div>
+     
+   
+    </div>   
   </div>
 </section>

@@ -71,6 +71,8 @@ gem 'bulma-rails'
 gem 'kaminari','~> 1.2.1'
 gem 'mechanize'
 gem 'nokogiri'
+gem 'kaminari-bootstrap', '~> 3.0.1'
+gem 'rails_admin', '~> 2.0.0.beta'
 
 
 
