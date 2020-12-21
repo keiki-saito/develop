@@ -1,24 +1,6 @@
-# README
+# Netflix(仮タイトル）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
+NetflixはNetflexに特化したコンテンツレビューサイトです。コメント機能、お気に入り機能、星の数評価を見やすくする機能を搭載しています。
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 使用技術
