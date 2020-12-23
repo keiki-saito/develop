@@ -13,7 +13,8 @@ NetflixはNetflexに特化したコンテンツレビューサイトです。コ
 
 
 # ER図
-https://cacoo.com/diagrams/h53OGSEuFh5rdi6p/3115D
+![ER1](https://user-images.githubusercontent.com/72840475/102954031-f7dcbb00-4515-11eb-9ba8-d29850d47a83.png)
+
 
 
 # 作成動機
