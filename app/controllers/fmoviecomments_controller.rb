@@ -8,14 +8,18 @@ class FmoviecommentsController < ApplicationController
           if @fmoviecomment.save
             @fmoviecomment.user_id=current_user.id
            
-            redirect_to fmovies_path,success: 'コメントに成功しました'
+            redirect_to fmovie_path(@fmovie),success: 'コメントに成功しました'
           else
             #binding.pry
             flash.now[:danger]='コメントに失敗しました'
-            render 'fmovie/show'
+            render 'fmovies/show'
           end
       
        end
+      def search
+        selection = params[:keyword]
+        @posts = Post.sort(selection)
+      end
       
         private
         def fmoviecomment_params

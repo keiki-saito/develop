@@ -6,7 +6,7 @@ ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+gem 'mysql2', '>= 0.4.4', '< 0.6.0', group: :development
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -63,6 +63,10 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+group :production do
+  gem 'pg'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
@@ -73,6 +77,12 @@ gem 'mechanize'
 gem 'nokogiri'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'rails_admin', '~> 2.0.0.beta'
+gem 'ransack'
+gem 'dotenv-rails'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
 
 
 

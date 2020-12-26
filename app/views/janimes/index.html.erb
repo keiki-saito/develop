@@ -3,13 +3,27 @@
 
 
   <%@janimes.each do |janime|%>
-  <%next if janime.id%2==1%>
+  <%next if janime.id.odd?%>
       <div class="column is-2 ml-2">
       <%=image_tag janime.anime_url,class: 'image',:width=>'250'%>
       
-         <%=link_to janime_path(janime),class: "button card-footer-item" do%>
+          <div class="image-item has-text-centered">
+               <div class="image-icon">
+                  <span class="is-small is-left">
+                     <i class="far fa-comment"></i>
+                  </span>
+                  <%=janime.janimecomments.count%>
+                  <span class="is-small is-left star">
+                     <i class="far fa-star"></i>
+                  </span>
+                  <%=janime.avg_score%>   
+               </div>
+            <%=link_to janime_path(janime),class: "button comment" do%>
                コメントを投稿する
             <%end%>
+           
+      
+         </div>
       
       </div>
    <%end%>
@@ -20,3 +34,6 @@
        </div>
    
 </section>
+
+
+

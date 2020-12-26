@@ -3,8 +3,7 @@ class JmoviecommentsController < ApplicationController
         #binding.pry
         @jmovie=Jmovie.find(params[:jmovie_id])
         @jmoviecomment=current_user.jmoviecomments.new(jmoviecomment_params)
-          #@usercomment = Usercomment.new(comment_params)
-          #@moviecomment.user_id = current_user.id
+      
           
           if @jmoviecomment.save
             @jmoviecomment.user_id=current_user.id
@@ -13,8 +12,8 @@ class JmoviecommentsController < ApplicationController
           else
             #binding.pry
             flash.now[:danger]='コメントに失敗しました'
-            @jmoviecomments=@movie.moviecomments.page(params[:page]).per(3)
-            render 'jmovie/show'
+            @jmoviecomments=@jmovie.jmoviecomments.page(params[:page]).per(3)
+            render 'jmovies/show'
           end
       
        end

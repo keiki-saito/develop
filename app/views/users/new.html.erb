@@ -31,21 +31,24 @@
             <em>(<%= @minimum_password_length %> characters minimum)</em>
             <% end %>
             <p class="control has-icons-left">
-            <%= f.password_field :password, autocomplete: "new-password", :placeholder => "password", class: "input" %>
+            <%= f.password_field :password, autocomplete: "new-password", :placeholder => "password", class: "input",id: 'password' %>
               <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
               </span>
             </p>
+            <input id="passcheck" type='checkbox'><span class="ml-2">パスワード確認</span>
+         
           </div>
 
           <div class="field">
             <%= f.label :password_confirmation %>
             <p class="control has-icons-left">
-              <%= f.password_field :password_confirmation, autocomplete: "new-password", :placeholder => "password confirmation", class: "input" %>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", :placeholder => "password confirmation", class: "input" ,id: 'password_confirmation'%>
               <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
               </span>
             </p>
+            <input id="pass" type='checkbox'><span class="ml-2">パスワード確認</span>
           </div>
 
           <div class="actions">
@@ -57,3 +60,26 @@
     </div>
   </div>
 </section>
+
+          <script>
+              $(function() {
+                    $('#passcheck').change(function(){
+                        if ( $(this).prop('checked') ) {
+                            $('#password').attr('type','text');
+                        } else {
+                            $('#password').attr('type','password');
+                        }
+                    });
+                });
+
+
+                $(function() {
+                    $('#pass').change(function(){
+                        if ( $(this).prop('checked') ) {
+                            $('#password_confirmation').attr('type','text');
+                        } else {
+                            $('#password_confirmation').attr('type','password');
+                        }
+                    });
+                });
+            </script>

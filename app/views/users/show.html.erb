@@ -1,0 +1,27 @@
+<section class="section user-container mt-5">
+    <div class="is-size-2 has-text-centered has-text-weight-bold"><%=current_user.name%>さんのページです</div>
+    <div class="container">
+      <p class="panel-tabs">
+        <%=link_to "海外映画",userfmovielikes_path,class:"tab-menu"%>
+        <%=link_to "国内映画",userjmovielikes_path,class:"tab-menu"%>
+        <%=link_to "アニメ",userjanimelikes_path,class:"tab-menu"%>
+        <%=link_to "オリジナルコンテンツ",useroriginallikes_path,class:"tab-menu"%>        
+    </p>
+   
+        <table class="table is-bordered mt-5">
+                <tr>
+                    <th>ユーザーネーム</th>
+                    <td><%=current_user.name%></td>
+                </tr>
+                <tr>
+                    <th>メールアドレス</th>
+                    <td><%=current_user.email%></td>
+                </tr>
+                <tr>
+                    <th>パスワード</th>
+                    <td>******************</td>
+                </tr>
+        </table>
+   
+    </div>
+</section>
