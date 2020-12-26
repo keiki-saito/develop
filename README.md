@@ -1,24 +1,48 @@
-# README
+# Netflix(仮タイトル）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
+NetflixはNetflexに特化したコンテンツレビューサイトです。コメント機能、お気に入り機能、星の数評価を見やすくする機能を搭載しています。
 
-Things you may want to cover:
+# 使用技術
+- Ruby 2.6.5
+- Rails 5.2.4.4
+- bulma-rails
+- mysql 5.7
+- Docker/docker-compose(開発環境)
+- jQuery
 
-* Ruby version
 
-* System dependencies
+# ER図
+![ER1](https://user-images.githubusercontent.com/72840475/102954031-f7dcbb00-4515-11eb-9ba8-d29850d47a83.png)
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+# 作成動機
+現在上映中の映画や、Netflixの他にアマゾンプライムやHuluなどの映像コンテンツが混ざっているレビューサイトは多くあるのですが、そうなってくると「レビューサイトの評価も良いし、〇〇観たいな！Netflixで探してみよう！、あれ？Netflixではやってないのか。。。。」みたいなことが度々あるかなと思いますし、実際に自分も経験しました。（アマゾンプライム、Huluを利用する際にも同様のことが言えると思います。）
 
-* How to run the test suite
+そこでなぜNetflixを選択したかというと、単純に自分が類似コンテンツの中で一番使っているサービスだからです。
+そういった理由で今回はNetflix限定のレビューサイトを作成しようと思いました。
 
-* Services (job queues, cache servers, search engines, etc.)
+# 機能一覧
+- ログイン/新規登録
+  - email、,パスワード、ユーザーネーム（新規登録時）
+  - email、パスワード(ログイン時)
+- コンテンツに対してのコメント、星の数による点数付け（５点満点）
+- 他のユーザーさんのコメント閲覧
+- コンテンツのお気に入り登録/解除
+- 平均評価/コメント数の閲覧
 
-* Deployment instructions
+# 苦労した点
+Netflixで扱っているコンテンツ一覧を取ってくるのが難しかったです。APIで取ってこようと最初は考えたのですが、なかなかうまく行かず、結局はサイトからスクレイピングして取ってきたのですが、タイトルがうまく取れなかったりして付け足したい機能を断念せざる得ない状況になってしまいました。
 
-* ...
+デザインの面でも苦労しました。本家のデザインが赤・黒を基調としているのですがそっちに寄せようか、または全く違う色にしようかと悩みましたが最終的には後者を選択し、主に青・白で差し色として黄色を入れる感じにしました。この選択は結構よかったのかなと自分では思っています。
+
+# 参考にしたサイト
+- Filmarks様
+  -https://filmarks.com/
+- Qiita様
+ -https://qiita.com
+- Netflix様
+ -https://www.netflix.com/browse
+
+
