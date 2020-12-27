@@ -29,17 +29,17 @@
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-end">
+     <div class="navbar-end">
       <div class="navbar-item has-dropdown is-hoverable ">
         <a class="navbar-link">
-        映画
+         映画
         </a>
         <div class="navbar-dropdown is-boxed is-right">
           <a href="/jmovies" class="navbar-item">
-          国内映画
+           国内映画
           </a>
           <a href="/fmovies" class="navbar-item">
-          海外映画
+           海外映画
           </a>
         </div>
       </div>
@@ -54,25 +54,27 @@
     </div>
     </div>
 
-      <div class="navbar-item has-dropdown is-hoverable ">
-        <a class="navbar-link">
-        ドラマ
-        </a>
-        <div class="navbar-dropdown is-boxed is-right">
-          <a class="navbar-item">
-            国内ドラマ
-          </a>
-          <a class="navbar-item">
-            韓国ドラマ
-          </a>
-        </div>
-      </div>
-      </div>
-       
-      </div>
-  </div>
 
-  <%if logged_in?%>
+    <div id="navbarBasicExample" class="navbar-menu">
+   <div class="navbar-end">
+    <div class="navbar-item  is-hoverable">
+      <a href="/originals" class="navbar-link">
+        オリジナルコンテンツ
+        </a>
+      </div>
+    </div>
+   </div>
+       
+      
+        
+  </div>
+<%if logged_in?%>
+  <div class="navbar-item">
+   
+    <%=link_to user_path(current_user) do%>
+       <span class="navbar-item mr-5"><i class="fas fa-user mr-3"></i><%=current_user.name%></span>
+    <%end%>
+  </div>
     <%=link_to "ログアウト" ,logout_path,method: :delete ,class: "button-custom button btn--shadow mt-2 mr-5"%>
   <%end%>
  
@@ -85,7 +87,7 @@
 
 
  <footer>
-    Reserved 
+   <p>© All rights reserved by saitokeiki.</p>
 </footer>
 
   </body>

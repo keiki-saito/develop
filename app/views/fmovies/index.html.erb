@@ -3,16 +3,31 @@
 
 
   <%@fmovies.each do |fmovie|%>
-  <%next if fmovie.id%2==1%>
+  <%next if fmovie.id.odd?%>
       <div class="column is-2 ml-2">
-      <%=image_tag fmovie.fmovie_url,class: 'image',:width=>'250'%>
+         <%=image_tag fmovie.fmovie_url,class: 'image',:width=>'250'%>
       
-        <%=link_to fmovie_path(fmovie),class: "button card-footer-item" do%>
-               コメントを投稿する
-        <%end%>
-      
+            <div class="image-item has-text-centered">
+               <div class="image-icon">
+                  <span class="is-small is-left">
+                     <i class="far fa-comment"></i>
+                  </span>
+                  <%=fmovie.fmoviecomments.count%>
+                  <span class="is-small is-left star">
+                     <i class="far fa-star"></i>
+                  </span>
+                  <%=fmovie.avg_score%>   
+               </div>
+               <%=link_to fmovie_path(fmovie) ,class: "button comment" do%>
+                     コメントを投稿する       
+                <%end%>
+            </div>
       </div>
+        
+         
    <%end%>
+               
+               
  
 </div>    
        <div class="columns is-centered">

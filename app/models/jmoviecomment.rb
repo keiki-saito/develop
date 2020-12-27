@@ -4,4 +4,5 @@ class Jmoviecomment < ApplicationRecord
     validates :title, presence: true
     validates :star, presence: true
     validates :description, presence: true
+
 end

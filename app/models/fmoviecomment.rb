@@ -4,4 +4,12 @@ class Fmoviecomment < ApplicationRecord
     validates :title, presence: true
     validates :star, presence: true
     validates :description, presence: true
+
+    def self.sort(selection)
+        case selection
+        when 'new'
+          return all.order(created_at: :DESC)
+        when 'old'
+        end
+    end
 end

@@ -1,11 +1,12 @@
 class JanimecommentsController < ApplicationController
     def create
         #binding.pry
+        if Janime.ids
         @janime=Janime.find(params[:janime_id])
         @janimecomment=current_user.janimecomments.new(janimecomment_params)
           #@usercomment = Usercomment.new(comment_params)
           @janimecomment.user_id = current_user.id
-          
+        
           if @janimecomment.save
             @janimecomment.user_id=current_user.id
            
@@ -14,9 +15,9 @@ class JanimecommentsController < ApplicationController
             #binding.pry
             flash.now[:danger]='コメントに失敗しました'
             @janimecomments=@janime.janimecomments.page(params[:page]).per(3)
-            render 'japananimes/show'
+            render 'janimes/show'
           end
-      
+        end
        end
       
         private

@@ -1,4 +1,5 @@
 class FmoviesController < ApplicationController
+    before_action :require_user_logged_in
     def index
         @fmovies=Fmovie.all.page(params[:page]).per(50)
     end

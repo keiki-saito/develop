@@ -1,0 +1,28 @@
+<section class="section session-container mt-5">
+<div class="is-size-2 has-text-left has-text-weight-bold"><%=current_user.name%>さんのお気に入り作品</div>
+ <div class="container">
+ <div class="columns is-centered">
+ <table border="1" class="table is-bordered likes-table">
+  <thead>
+  <tr>
+    <th class="has-text-centered">作品</th>
+    <th class="has-text-centered">平均評価</th>
+</tr>
+  </thead>
+   <%@userjanimelikes.each do |post|%>
+   <tr>
+      <td class="has-text-centered">
+        <div class="likes-td-image"><%=image_tag post.anime_url%></div>
+      </td>
+      <td class="likes-td-star has-text-centered"><i class="far fa-star star"></i><%=post.avg_score%></td>
+    </tr>
+   <%end%>
+ </table>
+</div>
+ <div class="columns is-centered">
+   <%= paginate @userjanimelikes%>
+ </div>
+
+
+</div>
+</section>
